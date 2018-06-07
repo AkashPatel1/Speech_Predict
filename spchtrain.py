@@ -36,5 +36,5 @@ gmm = GMM(n_components = 8, n_iter = 200, covariance_type='diag',
 gmm.fit(features)
 picklefile = f.split("\\")[-2].split(".wav")[0]+".gmm"
 
-# model saved as male.gmm
+# model saved as .gmm
 cPickle.dump(gmm,open(dest + picklefile,'wb'))
