@@ -16,9 +16,9 @@ def get_MFCC(sr,audio):
     return features
 
 #path to training data
-source   = "pygender\\pygender\\train_data\\youtube\\female\\"
+source   = "put\\your\\train_data_location"
 #path to save trained model   
-dest     = "pygender\\pygender\\"         
+dest     = "put\\trained\\model_destination"         
 files    = [os.path.join(source,f) for f in os.listdir(source) if 
              f.endswith('.wav')] 
 features = np.asarray(());
@@ -38,4 +38,3 @@ picklefile = f.split("\\")[-2].split(".wav")[0]+".gmm"
 
 # model saved as male.gmm
 cPickle.dump(gmm,open(dest + picklefile,'wb'))
-print('modeling completed for gender:',picklefile)
